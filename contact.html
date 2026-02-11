@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Fredwin Global Logistics Limited</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script 
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+    
+  </script>
+  <script>
+      (function(){
+        emailjs.init("DJ40n0Ghe7hTL76XC");
+      })();
+  </script>
+
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="brand">
+    <img src="images/logo.png" alt="Fredwin Global Logistics Logo">
+    <span>Fredwin Global Logistics Limited</span>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="payment.html" class="pay-btn">Make Payment</a>
+  </nav>
+</header>
+
+
+<section class="contact-section">
+  <h1>Contact Us</h1>
+
+    <form id="contact-form" class="contact-form">
+
+      <label>Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Subject:</label>
+      <input type="text" name="subject" required>
+
+      <label>Message:</label>
+      <textarea name="message" rows="6" required></textarea>
+
+      <button type="submit">Send Message</button>
+
+  </form>
+
+  <p id="success-message" style="display:none; color:green;">
+    Message sent successfully!
+  </p>
+
+</section>
+
+<script>
+document.getElementById("contact-form")
+.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Send notification email to company
+  emailjs.sendForm(
+    "YOUR_SERVICE_ID",
+    "YOUR_NOTIFICATION_TEMPLATE_ID",
+    this
+  );
+
+  // Send auto-reply email to customer
+  emailjs.sendForm(
+    "service_fxn0m3e",
+    "template_vy1jiph",
+    this
+  ).then(function() {
+
+    alert("Message sent successfully!");
+    document.getElementById("contact-form").reset();
+
+  }, function(error) {
+    alert("Failed to send message. Please try again.");
+  });
+
+});
+</script>
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+        <!-- Company Info -->
+        <div class="footer-column">
+        <h3>Fredwin Global Logistics Limited</h3>
+        <p>P.O. Box AH18, Achimota - Accra, Ghana</p>
+        <p>GPS Address: AO-T076-9014</p>
+        <p>📞 0302501166, 0204287921, 0243655492, 0555540580</p>
+        <p>✉ info@fredwingloballogistics.com</p>
+        </div>
+
+        <!-- Location -->
+        <div class="footer-column">
+        <h3>Our Location</h3>
+        <iframe 
+            src="https://www.google.com/maps?q=Achimota,Accra,Ghana&output=embed"
+            width="100%" 
+            height="200" 
+            style="border:0; border-radius:8px;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+        </div>
+
+        <!-- Quick Links -->
+         <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Fredwin Global Logistics Limited. All rights reserved.
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/233204287921?text=Hello%20Fredwin%20Global%20Logistics"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener">
+   <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
