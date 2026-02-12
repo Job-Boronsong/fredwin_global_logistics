@@ -121,16 +121,20 @@
 </a>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("mobile-menu");
-  const navLinks = document.getElementById("nav-links");
-
-  if (menuToggle && navLinks) {
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("mobile-menu");
+    const navLinks = document.getElementById("nav-links");
+    const overlay = document.getElementById("nav-overlay");
     menuToggle.addEventListener("click", function () {
       navLinks.classList.toggle("active");
+      overlay.classList.toggle("active");
     });
-  }
-});
+
+    overlay.addEventListener("click", function () {
+      navLinks.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  });
 </script>
 
 </body>
