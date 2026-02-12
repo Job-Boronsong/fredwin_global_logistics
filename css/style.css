@@ -615,6 +615,7 @@ img {
   .team-card {
     max-width: 100%;
     text-align: center;
+    align-items: center;
   }
 
   .team-card img {
@@ -638,5 +639,5 @@ img {
     line-height: 1.6;
     padding: 0 10px;
   }
-  
+
 }
