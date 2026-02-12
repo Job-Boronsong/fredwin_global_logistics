@@ -310,6 +310,41 @@ img {
 }
 
 /* =========================================
+   SERVICE DETAIL PAGE - CLEAN RESPONSIVE
+========================================= */
+
+.service-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  background: #f8f9fa;
+  gap: 60px;
+}
+
+.detail-text {
+  max-width: 50%;
+}
+
+.detail-text h1 {
+  font-size: 48px;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.detail-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.detail-image img {
+  width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* =========================================
    GALLERY SECTION
 ========================================= */
 .gallery-section {
@@ -651,5 +686,38 @@ img {
     line-height: 1.6;
     padding: 0 15px;
   }
-  
+
+}
+
+/* =========================================
+   MOBILE FIX
+========================================= */
+
+@media (max-width: 900px) {
+
+  .service-detail {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .detail-text {
+    max-width: 100%;
+  }
+
+  .detail-text h1 {
+    font-size: 32px;
+  }
+
+  .detail-text p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .detail-image img {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
 }
