@@ -244,11 +244,17 @@ img {
 }
 
 /* =========================================
-   TEAM SECTION
+   TEAM SECTION (BASE)
 ========================================= */
+
 .team-section {
   padding: 80px 10%;
   text-align: center;
+}
+
+.team-section h2 {
+  font-size: 36px;
+  margin-bottom: 60px;
 }
 
 .team-container {
@@ -258,13 +264,23 @@ img {
   flex-wrap: wrap;
 }
 
+.team-card {
+  display: flex;              /* 👈 IMPORTANT */
+  flex-direction: column;     /* 👈 IMPORTANT */
+  align-items: center;        /* 👈 PERFECT CENTER */
+  text-align: center;
+  max-width: 320px;
+}
+
 .team-card img {
   width: 160px;
   height: 160px;
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+
 
 /* =========================================
    SERVICES PAGE GRID
@@ -593,12 +609,12 @@ img {
 }
 
 /* =========================================
-   TEAM MOBILE FIX (CLEAN VERSION)
+   TEAM MOBILE FIX
 ========================================= */
 @media (max-width: 900px) {
 
   .team-section {
-    padding: 50px 20px;
+    padding: 60px 20px;
   }
 
   .team-section h2 {
@@ -609,35 +625,31 @@ img {
   .team-container {
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
   }
 
   .team-card {
+    width: 100%;
     max-width: 100%;
-    text-align: center;
-    align-items: center;
   }
 
   .team-card img {
-    width: 130px;
-    height: 130px;
-    margin-bottom: 15px;
+    width: 140px;
+    height: 140px;
   }
 
   .team-card h3 {
     font-size: 18px;
-    margin-bottom: 6px;
   }
 
   .team-card .position {
     font-size: 15px;
-    margin-bottom: 6px;
   }
 
   .team-card .bio {
     font-size: 14px;
     line-height: 1.6;
-    padding: 0 10px;
+    padding: 0 15px;
   }
-
+  
 }
