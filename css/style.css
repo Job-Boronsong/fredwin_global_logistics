@@ -436,17 +436,22 @@ img {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  width: 65px;
-  height: 65px;
+  width: 70px;
+  height: 70px;
   background: #25D366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
   z-index: 999;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
+}
+
+.whatsapp-float i {
+  font-size: 36px;   /* Bigger icon */
+  color: #ffffff;    /* White icon */
 }
 
 .whatsapp-float:hover {
