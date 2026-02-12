@@ -518,4 +518,19 @@ img {
     border-radius: 12px;
   }
 
+   .services-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .service-card {
+    min-width: 90%;
+    scroll-snap-align: center;
+  }
+
+  .nav-btn {
+    display: none; /* Hide arrows on mobile */
+  }
+
 }
