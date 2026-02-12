@@ -702,6 +702,11 @@ img {
     gap: 40px;
   }
 
+   /* Make image appear first */
+  .detail-image {
+    order: -1;
+  }
+
   .detail-text {
     max-width: 100%;
   }
