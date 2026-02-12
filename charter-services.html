@@ -16,31 +16,21 @@
     <img src="images/logo.png" alt="Fredwin Global Logistics Logo">
     <span>Fredwin Global Logistics Limited</span>
   </a>
-  
-  <nav class="navbar">
-    <div class="nav-container">
-      
-      <a href="index.html" class="logo-area">
-        <img src="images/logo.png" alt="Logo" class="logo">
-        <span class="company-name">Fredwin Global Logistics Limited</span>
-      </a>
 
-      <div class="menu-toggle" id="mobile-menu">
-        ☰
-      </div>
+  <div class="menu-toggle" id="mobile-menu">
+    ☰
+  </div>
 
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="payment.html" class="pay-btn">Make Payment</a></li>
-      </ul>
-
-    </div>
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="payment.html" class="pay-btn">Make Payment</a>
   </nav>
 </header>
+
 
 
 <section class="service-detail">
@@ -128,12 +118,16 @@
 </a>
 
 <script>
-  const menu = document.getElementById('mobile-menu');
-  const navLinks = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("mobile-menu");
+  const navLinks = document.getElementById("nav-links");
 
-  menu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+  }
+});
 </script>
 
 </body>
