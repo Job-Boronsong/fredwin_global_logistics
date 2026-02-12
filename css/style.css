@@ -399,22 +399,72 @@ img {
 }
 
 /* =========================================
-   PAYMENT FORM
+   PAYMENT SECTION (CLEAN & SPACED)
 ========================================= */
+
 .payment-section {
-  padding: 100px 10%;
+  padding: 80px 20px;
   background: #f1f5f9;
   text-align: center;
 }
 
-.payment-form {
-  max-width: 700px;
-  margin: auto;
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+.payment-section h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #1f2937;
 }
+
+.payment-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.payment-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.payment-form input,
+.payment-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.payment-form input:focus,
+.payment-form select:focus {
+  border-color: #2563eb;
+}
+
+.payment-form button {
+  width: 100%;
+  padding: 14px;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.payment-form button:hover {
+  background: #16a34a;
+}
+
 
 /* =========================================
    SERVICE DETAIL PAGE
