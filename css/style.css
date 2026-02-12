@@ -34,18 +34,30 @@ img {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
 }
 
 .brand img {
-  height: 45px;
+  height: 40px;
 }
 
 .brand span {
-  font-size: 20px;
-  font-weight: 700;
   color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 .navbar nav {
@@ -75,8 +87,17 @@ img {
   background: #22c55e;
   padding: 8px 14px;
   border-radius: 6px;
-  color: #fff !important;
+  color: white !important;
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+
 
 /* =========================================
    HERO SECTION
@@ -416,27 +437,31 @@ img {
 ========================================= */
 @media (max-width: 900px) {
 
-  .hero,
-  .about-section,
-  .service-detail {
-    flex-direction: column;
-    text-align: center;
+  .menu-toggle {
+    display: block;
   }
 
-  .hero-text,
-  .about-text,
-  .detail-text {
-    max-width: 100%;
-  }
-
-  .hero-image img,
-  .about-image img,
-  .detail-image img {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 100%;
+    background: #1d4ed8;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    display: none;
   }
 
-  .service-card {
-    min-width: 100%;
+   .nav-links.active {
+    display: flex;
   }
 
+  .nav-links a {
+    margin: 10px 0;
+  }
+
+  .brand span {
+    font-size: 16px;
+  }
 }
