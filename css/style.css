@@ -726,3 +726,38 @@ img {
     margin: 0 auto;
   }
 }
+
+/* =========================================
+   GALLERY MOBILE FIX
+========================================= */
+@media (max-width: 900px) {
+
+  .gallery-section {
+    padding: 60px 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 30px;
+  }
+
+  .gallery-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything */
+    text-align: center;
+  }
+
+  .gallery-card img {
+    width: 100%;
+    max-width: 350px; /* Prevent too wide images */
+    margin: 0 auto;
+    border-radius: 14px;
+  }
+
+  .gallery-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+}
