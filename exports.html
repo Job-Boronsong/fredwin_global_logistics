@@ -17,13 +17,28 @@
     <span>Fredwin Global Logistics Limited</span>
   </a>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-    <a href="payment.html" class="pay-btn">Make Payment</a>
+  <nav class="navbar">
+    <div class="nav-container">
+      
+      <a href="index.html" class="logo-area">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <span class="company-name">Fredwin Global Logistics Limited</span>
+      </a>
+
+      <div class="menu-toggle" id="mobile-menu">
+        ☰
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="payment.html" class="pay-btn">Make Payment</a></li>
+      </ul>
+
+    </div>
   </nav>
 </header>
 
@@ -109,6 +124,15 @@
    rel="noopener">
    <i class="fa-brands fa-whatsapp"></i>
 </a>
+
+<script>
+  const menu = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  menu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
