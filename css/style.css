@@ -434,8 +434,8 @@ img {
 ========================================= */
 .whatsapp-float {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 20px;
+  right: 20px;
   width: 70px;
   height: 70px;
   background: #25D366;
@@ -555,6 +555,64 @@ img {
 
   .nav-btn {
     display: none; /* Hide arrows on mobile */
+  }
+
+}
+
+/* =========================================
+   ABOUT PAGE MOBILE FIX
+========================================= */
+@media (max-width: 900px) {
+
+  .about-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text h1 {
+    font-size: 36px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+
+}
+
+/* =========================================
+   TEAM MOBILE FIX
+========================================= */
+@media (max-width: 900px) {
+
+  .team-section {
+    padding: 60px 20px;
+  }
+
+  .team-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .team-card {
+    max-width: 100%;
+  }
+
+  .team-card img {
+    width: 140px;
+    height: 140px;
   }
 
 }
