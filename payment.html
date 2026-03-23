@@ -54,7 +54,7 @@
     <label>Amount (GHS):</label>
     <input type="number" id="amount" placeholder="Amount in GHS" required>
 
-    <button onclick="payWithPaystack()">Pay Now</button>
+    <button onclick="payWithPaystack(event)">Pay Now</button>
 
   </div>
 </section>
@@ -68,22 +68,24 @@
 </a>
 
 <script>
-function payWithPaystack() {
+function payWithPaystack(e) {
+  e.preventDefault();
 
-  var email = document.getElementById("email").value;
-  var amount = document.getElementById("amount").value;
-  var service = document.getElementById("service").value;
+  const email = document.getElementById("email").value.trim();
+  const amount = document.getElementById("amount").value.trim();
+  const service = document.getElementById("service").value;
 
   if (!email || !amount || !service) {
     alert("Please fill all fields");
     return;
   }
 
-  var handler = PaystackPop.setup({
-    key: 'pk_test_e54efa294773806832e1e67126116dccae21288e',  // 👈 Replace this
+  const handler = PaystackPop.setup({
+    key: 'pk_live_24e5e1380d28e1f8451696053569046d6a6fc802', // 🔥 PUT YOUR LIVE PUBLIC KEY HERE
     email: email,
-    amount: amount * 100, // Paystack uses kobo/pesewas
+    amount: amount * 100, // pesewas
     currency: "GHS",
+
     metadata: {
       custom_fields: [
         {
@@ -93,12 +95,17 @@ function payWithPaystack() {
         }
       ]
     },
+
     callback: function(response) {
-      alert('Payment successful! Transaction reference: ' + response.reference);
-      window.location.href = "index.html";
+      // ✅ Success
+      alert("Payment successful!\nReference: " + response.reference);
+
+      // Optional redirect
+      window.location.href = "success.html"; // or keep index.html
     },
+
     onClose: function() {
-      alert('Transaction cancelled');
+      console.log("Payment window closed.");
     }
   });
 
